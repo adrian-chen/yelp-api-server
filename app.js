@@ -10,7 +10,7 @@ var yelp = require("yelp").createClient({
 });
 
 app.get('/', function(req, res) {
-    res.send("Hello World")
+    res.send("Develra's Yelp O-Auth Avoidence Service")
 })
 
 app.get('/search/:yelp_params', function(req, res) {    
