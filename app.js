@@ -30,7 +30,8 @@ app.get('/search/:yelp_params', function(req, res) {
 
 app.get('/business/:yelp_params', function(req, res) {
     // See http://www.yelp.com/developers/documentation/v2/business
-    yelp.business(qs.parse(req.params.yelp_params), function(error, data) {
+    yelp.business(req.params.yelp_params, function(error, data) {
+        res.send(data);
     });
 });
 
