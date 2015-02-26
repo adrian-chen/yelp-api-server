@@ -7,6 +7,12 @@ var yelp = require("yelp").createClient({
   consumer_secret: "q7Ghgx2gLh-qH-vNYmpLkUSueTQ",
   token: "W2ia0PkM0POzY6K2CSaUrYv5XRINCThT",
   token_secret: "PyHb46utgiZLhhDsR_36KWVSuKk"
+})
+;
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
 app.get('/', function(req, res) {
